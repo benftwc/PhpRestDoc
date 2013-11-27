@@ -7,6 +7,7 @@ PhpRestDoc is a REST API Documentation written in PHP
 ## Prerequisites
 
 <li>- PHP 5 or greater
+
 <li>- PHP MySQLi Extension
 
 ## Intallation
