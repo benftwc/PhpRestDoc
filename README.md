@@ -2,7 +2,7 @@
 
 ## What is PhpRestDoc ?
 
-PhpRestDoc is a REST API Documentation written in PHP
+PhpRestDoc is a simple-to-install and simple-to-use REST API Documentation generator written in PHP. This is a manual generator, which means that you need to manually create and update the documentation.
 
 ## Prerequisites
 
