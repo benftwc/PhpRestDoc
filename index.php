@@ -53,6 +53,9 @@
 <?php } ?>
 				</ul>
 <?php if (isset($_SESSION['user_id'])) { ?>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="?a=user_disconnect">Disconnection</a></li>
+				</ul>
 <?php } else { ?>
 				<form class="navbar-form navbar-right">
 					<div class="form-group">
@@ -68,67 +71,14 @@
 			
 		</div>
 		
-		<?php if (!isset($key_session) || isset($errors_config)) { ?>
-		
-		<div class="well" style="width: 90%; max-width: 640px; margin: 0 auto; margin-top: 80px;">
-			<form class="bs-example form-horizontal">
-				<fieldset>
-					<legend>One Step Installation</legend>
-					<div id="mysql_server_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="mysql_server" class="form-control" placeholder="MySQL Server" type="text" value="<?php echo $mysql_server; ?>">
-						</div>
-					</div>
-					<div id="mysql_username_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="mysql_username" class="form-control" placeholder="MySQL Username" type="text" value="<?php echo $mysql_username; ?>">
-						</div>
-					</div>
-					<div id="mysql_password_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="mysql_password" class="form-control" placeholder="MySQL Password" type="password" value="<?php echo $mysql_password; ?>">
-						</div>
-					</div>
-					<div id="mysql_database_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="mysql_database" class="form-control" placeholder="MySQL Database" type="text" value="<?php echo $mysql_database; ?>">
-						</div>
-					</div>
-					<div id="mysql_prefix_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="mysql_prefix" class="form-control" placeholder="MySQL Tables Prefix (i.e. 'prd_')" type="text" value="<?php echo $mysql_prefix; ?>">
-						</div>
-					</div>
-					<div id="user_name_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="user_name" class="form-control" placeholder="Administrator Name" type="text">
-						</div>
-					</div>
-					<div id="user_email_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="user_email" class="form-control" placeholder="Administrator E-mail" type="text">
-						</div>
-					</div>
-					<div id="user_password_parent" class="form-group">
-						<div class="col-lg-12">
-							<input id="user_password" class="form-control" placeholder="Administrator Password" type="password">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-lg-12">
-							<span id="button_install" class="btn btn-primary" onclick="config_test();">INSTALL AND BEGIN »</span> 
-							<span id="button_testing" class="btn btn-info hide">TESTING...</span> 
-						</div>
-					</div>
-				</fieldset>
-			</form>
-		</div>
-		
 		<?php
-			} else {
-				
+			if (!isset($key_session) || isset($errors_config))
+			{
+				require_once 'content/installation.php';
+			}
+			else
+			{
 				require_once 'content/' . $_GET['c'] . '.php';
-				
 			}
 		?>
 		
