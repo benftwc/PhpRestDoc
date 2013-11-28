@@ -6,11 +6,9 @@ PhpRestDoc is a simple-to-install and simple-to-use REST API Documentation gener
 
 ## Prerequisites
 
-<li>- PHP 5 or greater
-
-<li>- PHP MySQLi Extension
-
-<li>- Writable include/ directory (but you can also manually write include/config.php file)
+* PHP 5 or greater
+* PHP MySQLi Extension
+* Writable include/ directory (but you can also manually write include/config.php file)
 
 ## Intallation
 
