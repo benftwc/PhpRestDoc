@@ -34,7 +34,7 @@ here is what you need to write in the /include/config.php file :
 
 (The MIT License)
 
-Copyright (c) 2013 [Hunear] (https://hunear.com)  
+Copyright (c) 2013 [Hunear] (https://hunear.com)
 Copyright (c) 2013 [Ivan Gabriele] (https://twitter.com/ivan_gabriele)  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
