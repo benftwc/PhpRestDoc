@@ -16,7 +16,7 @@ PhpRestDoc is a simple-to-install and simple-to-use REST API Documentation gener
 
 Just copy/paste all files in your PhpRestDoc directory and type the URL (i.e. http://example.com/phprestdoc/) to launch the One-Step-Installation.
 
-If you can't (or don't want to) make /include writable,
+If you can't (or don't want to) make /include writable,  
 here is what you need to write in the /include/config.php file :
 ```php
 <?php
@@ -34,7 +34,7 @@ here is what you need to write in the /include/config.php file :
 
 (The MIT License)
 
-Copyright (c) 2013 [Hunear] (https://hunear.com)
+Copyright (c) 2013 [Hunear] (https://hunear.com)  
 Copyright (c) 2013 [Ivan Gabriele] (https://twitter.com/ivan_gabriele)  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
