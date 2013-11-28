@@ -11,6 +11,7 @@
 		Write ./include/config.php
 	===================================== */
 	
+	$key_password = uniqid();
 	$key_session = uniqid();
 	
 	$file_source = '<?php' . "\n";
@@ -19,6 +20,7 @@
 	$file_source .= '	$mysql_password = "' . str_replace('"','\"', $_POST['mysql_password']) . '";' . "\n";
 	$file_source .= '	$mysql_database = "' . $_POST['mysql_database'] . '";' . "\n";
 	$file_source .= '	$mysql_prefix = "' . $_POST['mysql_prefix'] . '";' . "\n";
+	$file_source .= '	$key_password = "' . $key_password . '";' . "\n";
 	$file_source .= '	$key_session = "' . $key_session . '";' . "\n";
 	$file_source .= '?>';
 	
@@ -63,7 +65,7 @@
 	$query .= "INSERT INTO " . $_POST['mysql_prefix'] . "variable_type (variable_type_name) VALUES ('string');" . "\n";
 	
 	// MySQL table : user
-	$query .= "INSERT INTO " . $_POST['mysql_prefix'] . "user (user_name, user_email, user_password) VALUES ('" . addslashes($_POST['user_name']) . "', '" . $_POST['user_email'] . "', '" . sha1($_POST['user_password']) . "');";
+	$query .= "INSERT INTO " . $_POST['mysql_prefix'] . "user (user_name, user_email, user_password) VALUES ('" . addslashes($_POST['user_name']) . "', '" . $_POST['user_email'] . "', '" . hash('sha512', $_POST['user_password'] . $key_password) . "');";
 	
 	// MySQLi connection, execution and close
 	$mysqli = new mysqli($_POST['mysql_server'], $_POST['mysql_username'], $_POST['mysql_password'], $_POST['mysql_database']);

@@ -1,6 +1,9 @@
 <?php
-	// Content
-	if (isset($_SESSION['user_id'])) $contents = array("documentation", "administration");
-	else $contents = array("documentation");
-	if (!isset($_GET['c']) || !in_array($_GET['c'], $contents)) $_GET['c'] = $contents[0];
+	// Url of PhpRestDoc
+	$base_url = strtok($_SERVER["REQUEST_URI"], '?');
+	
+	// Menu
+	if (isset($_SESSION['user_id'])) $menus = array("documentation", "administration");
+	else $menus = array("documentation");
+	if (!isset($_GET['menu']) || !in_array($_GET['menu'], $menus)) $_GET['menu'] = $menus[0];
 ?>

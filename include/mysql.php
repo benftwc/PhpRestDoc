@@ -3,13 +3,13 @@
 		if (@mysql_select_db($mysql_database)) {
 			mysql_query("SET NAMES 'utf8'");
 		} else {
-			$errors_config = 'wrong_mysql_select_db';
+			$error_config = 'wrong_mysql_select_db';
 		}
 	} else {
-		$errors_config = 'wrong_mysql_connect';
+		$error_config = 'wrong_mysql_connect';
 	}
 	
-	if (isset($errors_config) && isset($key_session))
+	if (isset($error_config) && isset($key_session))
 	{
 		$_SESSION = array();
 		session_destroy();
