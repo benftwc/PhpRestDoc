@@ -32,7 +32,7 @@ Once you've written it, you just have to reload the PhpRestDoc page.
 
 (The MIT License)
 
-Copyright (c) 2013 [Ivan Gabriele] (https://twitter.com/ivan_gabriele) for Hunear (https://hunear.com) project
+Copyright (c) 2013 [Ivan Gabriele] (https://twitter.com/ivan_gabriele) for [Hunear] (https://hunear.com) project.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
