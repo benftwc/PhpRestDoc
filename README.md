@@ -28,6 +28,14 @@ If you can't make /include writable, here is what your /include/config.php file 
 ```
 Once you've written it, you just have to reload the PhpRestDoc page.
 
+## Frameworks and scripts
+
+* JQuery 1.10.2 (via Google)
+* Bootstrap 3.0.2 (via NetDNA)
+* Bootswatch 3.0.2 (via NetDNA)
+* HTML5 Shim 3.7.0 (via MaxCDN)
+* Respond.js 1.3.0 (via MaxCDN)
+
 ## License
 
 (The MIT License)
