@@ -10,9 +10,23 @@ PhpRestDoc is a simple-to-install and simple-to-use REST API Documentation gener
 
 <li>- PHP MySQLi Extension
 
+<li>- Writable include/ directory (but you can also manually write include/config.php file)
+
 ## Intallation
 
 Just copy/paste all files in your PhpRestDoc directory and type the URL (i.e. http://example.com/phprestdoc/) to launch the One-Step-Installation.
+
+If you can't (and don't want to) make /include writable, here is what you need to write in the /include/config.php file :
+```php
+<?php
+	$mysql_server = "<the address of your MySQL server>";
+	$mysql_username = "<your MySQL username>";
+	$mysql_password = "<your MySQL password>";
+	$mysql_database = "<the name of MySQL database you want to user for PhpRestDoc>";
+	$mysql_prefix = "<a unique prefix for PhpRestDoc MySQL tables>";
+	$key_password = "<a unique passphrase>";
+	$key_session = "<another unique passphrase (different from the $key_password one)>"";
+?>```
 
 ## License
 
