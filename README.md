@@ -16,8 +16,7 @@ PhpRestDoc is a simple-to-install and simple-to-use REST API Documentation gener
 
 Just copy/paste all files in your PhpRestDoc directory and type the URL (i.e. http://example.com/phprestdoc/) to launch the One-Step-Installation.
 
-If you can't (or don't want to) make /include writable,  
-here is what you need to write in the /include/config.php file :
+If you can't make /include writable, here is what your /include/config.php file must look like :
 ```php
 <?php
 	$mysql_server = "<the address of your MySQL server>";
@@ -29,6 +28,7 @@ here is what you need to write in the /include/config.php file :
 	$key_session = "<another unique passphrase (different from $key_password)>"";
 ?>
 ```
+Once you've written it, you just have to reload the PhpRestDoc page.
 
 ## License
 
