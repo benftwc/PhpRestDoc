@@ -25,8 +25,9 @@ If you can't (and don't want to) make /include writable, here is what you need t
 	$mysql_database = "<the name of MySQL database you want to user for PhpRestDoc>";
 	$mysql_prefix = "<a unique prefix for PhpRestDoc MySQL tables>";
 	$key_password = "<a unique passphrase>";
-	$key_session = "<another unique passphrase (different from the $key_password one)>"";
-?>```
+	$key_session = "<another unique passphrase (different from $key_password)>"";
+?>
+```
 
 ## License
 
