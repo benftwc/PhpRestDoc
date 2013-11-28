@@ -1,6 +1,7 @@
 <?php
-	if (@mysql_connect($mysql_server, $mysql_username, $mysql_password)) {
-		if (@mysql_select_db($mysql_database)) {
+try{
+	if (mysql_connect($mysql_server, $mysql_username, $mysql_password)) {
+		if (mysql_select_db($mysql_database)) {
 			mysql_query("SET NAMES 'utf8'");
 		} else {
 			$error_config = 'wrong_mysql_select_db';
@@ -18,4 +19,8 @@
 		echo 'NB: if you want to re-install PhpRestDoc, just delete everything inside ./include/config.php file and reload this page. But Be careful, you\'ll loose all your PhpRestDoc data.' . "\n";
 		exit();
 	}
+}
+catch ($e) {
+  echo $e->getMessage();
+}
 ?>
